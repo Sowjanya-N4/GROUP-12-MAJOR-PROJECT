@@ -1,0 +1,243 @@
+/* Department Dashboard Animations */
+
+/* Dashboard Widget Animations */
+.dashboard-widget {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.dashboard-widget:nth-child(1) { animation-delay: 0.1s; }
+.dashboard-widget:nth-child(2) { animation-delay: 0.2s; }
+.dashboard-widget:nth-child(3) { animation-delay: 0.3s; }
+.dashboard-widget:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Feature Card Animations */
+.feature-card {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+.feature-card:nth-child(4) { animation-delay: 0.4s; }
+.feature-card:nth-child(5) { animation-delay: 0.5s; }
+.feature-card:nth-child(6) { animation-delay: 0.6s; }
+.feature-card:nth-child(7) { animation-delay: 0.7s; }
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hover Effects */
+.dashboard-widget:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2) !important;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15) !important;
+}
+
+/* Button Hover Animations */
+.actionBtn:hover {
+  transform: scale(1.08) !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+}
+
+/* Card Header Gradient Animation */
+.cardHeader {
+  background: linear-gradient(135deg, #1976d2, #1565c0);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Pulse Animation for Important Numbers */
+.statNumber, .widgetValue {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Floating Animation for Icons */
+.widgetIcon, .statIcon, .docIcon {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Notice Item Slide Animation */
+.noticeItem {
+  animation: slideInRight 0.5s ease-out;
+}
+
+.noticeItem:nth-child(1) { animation-delay: 0.1s; }
+.noticeItem:nth-child(2) { animation-delay: 0.2s; }
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Event Item Fade Animation */
+.eventItem {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.eventItem:nth-child(1) { animation-delay: 0.1s; }
+.eventItem:nth-child(2) { animation-delay: 0.2s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Company Item Scale Animation */
+.companyItem {
+  animation: scaleIn 0.5s ease-out;
+}
+
+.companyItem:nth-child(1) { animation-delay: 0.1s; }
+.companyItem:nth-child(2) { animation-delay: 0.2s; }
+.companyItem:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Stat Card Bounce Animation */
+.statCard {
+  animation: bounceIn 0.6s ease-out;
+}
+
+.statCard:nth-child(1) { animation-delay: 0.1s; }
+.statCard:nth-child(2) { animation-delay: 0.2s; }
+.statCard:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Document Item Slide Up Animation */
+.docItem {
+  animation: slideUp 0.5s ease-out;
+}
+
+.docItem:nth-child(1) { animation-delay: 0.1s; }
+.docItem:nth-child(2) { animation-delay: 0.2s; }
+.docItem:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Loading Animation */
+.loading {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Animations */
+@media (max-width: 768px) {
+  .dashboard-widget,
+  .feature-card {
+    animation-duration: 0.4s;
+  }
+  
+  .widgetIcon,
+  .statIcon,
+  .docIcon {
+    animation: none;
+  }
+}
+
+/* Smooth Transitions */
+* {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus States for Accessibility */
+.actionBtn:focus {
+  outline: 2px solid #1976d2;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .dashboard-widget,
+  .feature-card {
+    animation: none;
+    box-shadow: none;
+  }
+}
